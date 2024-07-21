@@ -4,7 +4,7 @@ const cors = require("cors");
 const TodoModel = require("./Models/ToDo");
 
 const app = express();
-app.use(cors());
+app.use(cors({origin: ['https://mern-todo-app-backend-iota.vercel.app']}));
 app.use(express.json());
 
 mongoose.connect(
